@@ -1,0 +1,115 @@
+{
+  "v": 1,
+  "kdf": {
+    "name": "PBKDF2",
+    "hash": "SHA-256",
+    "iterations": 310000,
+    "salt": "1ymIxanXu6ZZD/d1W10i1w=="
+  },
+  "cipher": "AES-GCM",
+  "chunk": 4194304,
+  "ivLen": 12,
+  "tagLen": 16,
+  "verifier": {
+    "iv": "ZYXN+JpE83ZNHtnk",
+    "ct": "HMRX7G5pYLPyxNtrXIVyfWTp150coEVVYM/4wg=="
+  },
+  "files": {
+    "media/edit-subject-grade.mp4": {
+      "bytes": 712040,
+      "plain": 712012
+    },
+    "media/exam-committee-local-part1.mp4": {
+      "bytes": 19111450,
+      "plain": 19111310
+    },
+    "media/exam-committee-local-part2.mp4": {
+      "bytes": 20478373,
+      "plain": 20478233
+    },
+    "media/hr-VID-20250821-WA0019.mp4": {
+      "bytes": 5915240,
+      "plain": 5915184
+    },
+    "media/hr-VID-20251103-WA0029.mp4": {
+      "bytes": 35098332,
+      "plain": 35098080
+    },
+    "media/reg-VID-20250317-WA0058.mp4": {
+      "bytes": 6423691,
+      "plain": 6423635
+    },
+    "media/reg-VID-20251214-WA0010.mp4": {
+      "bytes": 743299,
+      "plain": 743271
+    },
+    "media/sis-VID-20250620-WA0000.mp4": {
+      "bytes": 4518220,
+      "plain": 4518164
+    },
+    "media/sis-VID-20250816-WA0010.mp4": {
+      "bytes": 8710655,
+      "plain": 8710571
+    },
+    "media/sis-VID-20251011-WA0035.mp4": {
+      "bytes": 8710655,
+      "plain": 8710571
+    },
+    "media/stumgmt-VID-20250315-WA0018.mp4": {
+      "bytes": 759627,
+      "plain": 759599
+    },
+    "media/stumgmt-VID-20250426-WA0006.mp4": {
+      "bytes": 8875195,
+      "plain": 8875111
+    },
+    "media/stumgmt-VID-20250513-WA0061.mp4": {
+      "bytes": 2962061,
+      "plain": 2962033
+    },
+    "media/stumgmt-VID-20250625-WA0025.mp4": {
+      "bytes": 1114331,
+      "plain": 1114303
+    },
+    "ورش اللجنة الامتحانية/1.mp4": {
+      "bytes": 78165002,
+      "plain": 78164470
+    },
+    "ورش اللجنة الامتحانية/2.mp4": {
+      "bytes": 85895209,
+      "plain": 85894621
+    },
+    "ورش اللجنة الامتحانية/3.mp4": {
+      "bytes": 91683028,
+      "plain": 91682412
+    },
+    "تعديل معلومات الطالب - SIS.pdf": {
+      "bytes": 1762007,
+      "plain": 1761979
+    },
+    "docs/bologna-quality-workshop.pdf": {
+      "bytes": 488959,
+      "plain": 488931
+    },
+    "docs/circular-no-admission-until-systems-complete.pdf": {
+      "bytes": 5786652,
+      "plain": 5786596
+    },
+    "docs/e-systems-requirements.pdf": {
+      "bytes": 7561781,
+      "plain": 7561725
+    },
+    "docs/student-cases-handling.pdf": {
+      "bytes": 656731,
+      "plain": 656703
+    },
+    "ورش اللجنة الامتحانية/GB User Manual_Arabic_V1.pdf": {
+      "bytes": 2270353,
+      "plain": 2270325
+    },
+    "ورش اللجنة الامتحانية/اعمام اطلاق نظام اللجنة الامتحانية للسنة الدراسية 2025-2026 صادر.pdf": {
+      "bytes": 523296,
+      "plain": 523268
+    }
+  }
+}

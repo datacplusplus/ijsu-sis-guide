@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<title>دليل نظام إدارة الدرجات - GB System</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: #f4f6f8;
+    color: #1a1a1a;
+    direction: rtl;
+    line-height: 1.8;
+  }
+
+  /* ===== COVER PAGE ===== */
+  .cover {
+    background: linear-gradient(135deg, #7b1c1c 0%, #a82020 50%, #c0392b 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    page-break-after: always;
+  }
+  .cover .ministry {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    margin-bottom: 10px;
+  }
+  .cover .logo-icon {
+    font-size: 5rem;
+    margin: 20px 0;
+  }
+  .cover h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .cover h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 30px;
+  }
+  .cover .badge {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    margin: 5px;
+    display: inline-block;
+  }
+  .cover .version {
+    margin-top: 40px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+  }
+
+  /* ===== MAIN LAYOUT ===== */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+  }
+
+  /* ===== TABLE OF CONTENTS ===== */
+  .toc {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .toc h2 {
+    font-size: 1.8rem;
+    color: #7b1c1c;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #7b1c1c;
+  }
+  .toc ul { list-style: none; }
+  .toc > ul > li {
+    margin-bottom: 8px;
+  }
+  .toc > ul > li > a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    transition: color 0.2s;
+  }
+  .toc > ul > li > a:hover { color: #7b1c1c; }
+  .toc > ul > li > a .toc-num {
+    background: #7b1c1c;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  .toc ul ul {
+    list-style: none;
+    padding-right: 48px;
+    margin-top: 4px;
+  }
+  .toc ul ul li a {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    padding: 2px 0;
+  }
+  .toc ul ul li a:hover { color: #7b1c1c; }
+  .toc ul ul li::before {
+    content: "◀ ";
+    color: #ccc;
+    font-size: 0.7rem;
+  }
+
+  /* ===== SECTIONS ===== */
+  .section {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #f0f0f0;
+  }
+  .section-num {
+    background: #7b1c1c;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .section h2 {
+    font-size: 1.7rem;
+    color: #7b1c1c;
+    font-weight: 800;
+  }
+
+  .section h3 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 700;
+    margin: 25px 0 12px;
+    padding: 8px 15px;
+    background: #fef0f0;
+    border-right: 4px solid #7b1c1c;
+    border-radius: 4px;
+  }
+
+  .section h4 {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 700;
+    margin: 18px 0 8px;
+  }
+
+  .section p {
+    font-size: 0.97rem;
+    color: #444;
+    margin-bottom: 12px;
+    line-height: 1.9;
+  }
+
+  /* ===== STEPS ===== */
+  .steps { margin: 15px 0; }
+  .step {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    padding: 14px;
+    background: #fafafa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+  .step-num {
+    background: #7b1c1c;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+  .step-content { flex: 1; }
+  .step-content strong { color: #7b1c1c; }
+
+  /* ===== SCREENSHOTS ===== */
+  .screenshot-box {
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border: 2px solid #e0e0e0;
+  }
+  .screenshot-box img {
+    width: 100%;
+    display: block;
+  }
+  .screenshot-caption {
+    background: #2c2c2c;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  /* ===== LIFECYCLE ===== */
+  .lifecycle {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .lifecycle-step {
+    background: linear-gradient(135deg, #7b1c1c, #a82020);
+    color: white;
+    border-radius: 10px;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .lifecycle-step .lc-num {
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 6px;
+    opacity: 0.8;
+  }
+  .lifecycle-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .lifecycle-extra-step {
+    background: #6c3483;
+    color: white;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  /* ===== NAV MENU ===== */
+  .nav-menu {
+    background: #2c2c2c;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  .nav-menu h4 {
+    color: #ff6b6b;
+    margin-bottom: 12px;
+    font-size: 1rem;
+  }
+  .nav-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: default;
+  }
+  .nav-item.active { background: #7b1c1c; }
+  .nav-dot { width: 8px; height: 8px; background: #ff6b6b; border-radius: 50%; flex-shrink: 0; }
+
+  /* ===== ALERT BOXES ===== */
+  .alert {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 0.95rem;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .alert-icon { font-size: 1.3rem; flex-shrink: 0; }
+  .alert-info { background: #e8f4fd; border-right: 4px solid #3498db; color: #1a5276; }
+  .alert-warning { background: #fef9e7; border-right: 4px solid #f39c12; color: #784212; }
+  .alert-success { background: #eafaf1; border-right: 4px solid #27ae60; color: #1e6b42; }
+  .alert-danger { background: #fdedec; border-right: 4px solid #e74c3c; color: #922b21; }
+
+  /* ===== TABLES ===== */
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 0.92rem;
+  }
+  .info-table th {
+    background: #7b1c1c;
+    color: white;
+    padding: 10px 14px;
+    text-align: right;
+    font-weight: 600;
+  }
+  .info-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+  }
+  .info-table tr:nth-child(even) td { background: #fafafa; }
+  .info-table tr:hover td { background: #fef0f0; }
+
+  /* ===== BUTTONS DEMO ===== */
+  .btn-demo {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin: 3px;
+    vertical-align: middle;
+  }
+  .btn-red { background: #7b1c1c; color: white; }
+  .btn-green { background: #27ae60; color: white; }
+  .btn-blue { background: #2980b9; color: white; }
+  .btn-gray { background: #888; color: white; }
+
+  /* ===== STATUS BADGES ===== */
+  .badge-status {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+  .badge-pass { background: #d5f5e3; color: #196f3d; }
+  .badge-fail { background: #fdedec; color: #922b21; }
+  .badge-absent { background: #eaecee; color: #555; }
+  .badge-pending { background: #fef9e7; color: #784212; }
+
+  /* ===== DIVIDER ===== */
+  .divider {
+    height: 3px;
+    background: linear-gradient(to left, #7b1c1c, transparent);
+    margin: 20px 0;
+    border-radius: 2px;
+  }
+
+  /* ===== PROGRESS BAR ===== */
+  .progress-tracker {
+    display: flex;
+    gap: 0;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .pt-step {
+    flex: 1;
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: white;
+  }
+  .pt-done { background: #27ae60; }
+  .pt-active { background: #7b1c1c; }
+  .pt-todo { background: #bdc3c7; color: #555; }
+
+  /* ===== PRINT STYLES ===== */
+  @media print {
+    .cover { min-height: 100vh; page-break-after: always; }
+    .section { page-break-inside: avoid; }
+    body { background: white; }
+    .screenshot-box { box-shadow: none; border: 1px solid #ccc; }
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+    font-size: 0.85rem;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== COVER PAGE ==================== -->
+<div class="cover">
+  <div class="ministry">دليل غير رسمي · إعداد ذاتي · غير صادر عن وزارة التعليم العالي والبحث العلمي</div>
+  <div class="logo-icon">🎓</div>
+  <h1>دليل نظام إدارة الدرجات</h1>
+  <h2>GB System — نظام الدرجات الجامعي</h2>
+  <div style="margin: 20px 0;">
+    <span class="badge">👤 دليل الموظف</span>
+    <span class="badge">📋 اللجنة الامتحانية</span>
+    <span class="badge">🏛️ النظام الأكاديمي</span>
+  </div>
+  <p style="opacity:0.85; max-width: 600px; margin-top: 20px; line-height: 1.8;">
+    هذا الدليل الشامل يوضح جميع خطوات استخدام نظام إدارة الدرجات الجامعي لموظفي اللجنة الامتحانية،
+    من إدخال الدرجات وإدارة الامتحانات وحتى إعلان النتائج النهائية.
+  </p>
+  <div class="version">الإصدار 1.0 &nbsp;|&nbsp; 2024-2025 &nbsp;|&nbsp; السنة الأكاديمية</div>
+</div>
+
+<div class="container">
+
+<!-- ==================== TABLE OF CONTENTS ==================== -->
+<div class="toc" id="top">
+  <h2>📋 فهرس المحتويات</h2>
+  <ul>
+    <li>
+      <a href="#sec1"><span class="toc-num">1</span> مقدمة — نظرة عامة على النظام</a>
+      <ul>
+        <li><a href="#sec1-1">دورة حياة نظام GB System</a></li>
+        <li><a href="#sec1-2">القائمة الجانبية الرئيسية</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#sec2"><span class="toc-num">2</span> تسجيل الدخول والصفحة الرئيسية</a>
+      <ul>
+        <li><a href="#sec2-1">كيفية تسجيل الدخول</a></li>
+        <li><a href="#sec2-2">الصفحة الرئيسية والإحصائيات</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#sec3"><span class="toc-num">3</span> إدارة الامتحانات</a>
+      <ul>
+        <li><a href="#sec3-1">نظرة عامة على عملية الامتحان</a></li>
+        <li><a href="#sec3-2">تغيير حالة الامتحان</a></li>
+        <li><a href="#sec3-3">فتح باب الاعتراضات</a></li>
+        <li><a href="#sec3-4">تصفية الفترات الامتحانية</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#sec4"><span class="toc-num">4</span> قوائم درجات الطلاب</a>
+      <ul>
+        <li><a href="#sec4-1">الوصول إلى قوائم الدرجات</a></li>
+        <li><a href="#sec4-2">توليد قوائم الدرجات</a></li>
+        <li><a href="#sec4-3">إدارة الدرجات وإدخالها</a></li>
+        <li><a href="#sec4-4">حالات الطلاب</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#sec5"><span class="toc-num">5</span> إدارة الاعتراضات</a>
+      <ul>
+        <li><a href="#sec5-1">عرض الاعتراضات</a></li>
+        <li><a href="#sec5-2">معالجة الاعتراض</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#sec6"><span class="toc-num">6</span> إدارة درجة المعادلة</a>
+      <ul>
+        <li><a href="#sec6-1">قرارات المعادلة</a></li>
+        <li><a href="#sec6-2">إضافة قرار معادلة جديد</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#sec7"><span class="toc-num">7</span> طباعة النتائج</a>
+      <ul>
+        <li><a href="#sec7-1">إدارة طباعة النتائج</a></li>
+        <li><a href="#sec7-2">طباعة شهادات الطلاب</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#sec8"><span class="toc-num">8</span> ماستر شيت والتقارير</a>
+    </li>
+    <li>
+      <a href="#sec9"><span class="toc-num">9</span> إعداد اللجنة الامتحانية والأدوار</a>
+      <ul>
+        <li><a href="#sec9-1">إعداد اللجنة الامتحانية</a></li>
+        <li><a href="#sec9-2">تعيين الأعضاء والأدوار والصلاحيات</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#sec10"><span class="toc-num">10</span> درجات سنوات سابقة وتوزيع الطلاب</a>
+    </li>
+  </ul>
+</div>
+
+
+<!-- ==================== SECTION 1 ==================== -->
+<div class="section" id="sec1">
+  <div class="section-header">
+    <div class="section-num">1</div>
+    <h2>مقدمة — نظرة عامة على النظام</h2>
+  </div>
+
+  <p>
+    نظام <strong>GB System</strong> هو نظام إدارة الدرجات الجامعي التابع لوزارة التعليم العالي والبحث العلمي.
+    يُستخدم النظام من قِبَل موظفي اللجنة الامتحانية لإدارة جميع مراحل العملية الامتحانية، بدءاً من تحضير
+    المتطلبات وحتى إعلان النتائج النهائية والتعامل مع الاعتراضات.
+  </p>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t001m29s.jpg" alt="دورة حياة نظام GB System">
+    <div class="screenshot-caption">شاشة دورة حياة نظام GB System — الخطوات الثماني الرئيسية للعملية الامتحانية</div>
+  </div>
+
+  <h3 id="sec1-1">1.1 ملخص سير العملية الامتحانية</h3>
+  <p>قبل البدء بشرح تفاصيل كل خطوة، فيما يلي ملخص لسير العملية الامتحانية بشكل عام:</p>
+
+  <div class="lifecycle">
+    <div class="lifecycle-step"><span class="lc-num">1</span>توليد قوائم الدرجات</div>
+    <div class="lifecycle-step"><span class="lc-num">2</span>تدقيق أسماء الطلاب والمواد</div>
+    <div class="lifecycle-step"><span class="lc-num">3</span>إدخال درجات السعي</div>
+    <div class="lifecycle-step"><span class="lc-num">4</span>إنشاء فترة امتحانية</div>
+    <div class="lifecycle-step"><span class="lc-num">5</span>إدخال درجات النهائي</div>
+    <div class="lifecycle-step"><span class="lc-num">6</span>التدقيق والمصادقات</div>
+    <div class="lifecycle-step"><span class="lc-num">7</span>إعلان النتائج</div>
+    <div class="lifecycle-step"><span class="lc-num">8</span>مرحلة الاعتراضات</div>
+  </div>
+  <div class="lifecycle-extra">
+    <div class="lifecycle-extra-step">✅ مرحلة الدرجات الإضافية (قرارات وزارية/جامعية)</div>
+  </div>
+
+  <div class="alert alert-info">
+    <div class="alert-icon">ℹ️</div>
+    <div>يجب إتمام كل خطوة بالترتيب. لا يمكن الانتقال إلى الخطوة التالية قبل إكمال السابقة والمصادقة عليها من الجهة المختصة.</div>
+  </div>
+
+  <h3 id="sec1-2">1.2 القائمة الجانبية الرئيسية</h3>
+  <p>توجد على يمين الشاشة قائمة تنقل رئيسية تحتوي على جميع وحدات النظام:</p>
+
+  <div class="nav-menu">
+    <h4>🗂️ وحدات النظام</h4>
+    <div class="nav-items">
+      <div class="nav-item"><div class="nav-dot"></div> الصفحة الرئيسية</div>
+      <div class="nav-item"><div class="nav-dot"></div> قوائم درجات الطلاب</div>
+      <div class="nav-item active"><div class="nav-dot"></div> إدارة الامتحانات ◀ (الوحدة النشطة)</div>
+      <div class="nav-item"><div class="nav-dot"></div> إدارة الاعتراضات</div>
+      <div class="nav-item"><div class="nav-dot"></div> إدارة درجة المعادلة</div>
+      <div class="nav-item"><div class="nav-dot"></div> طباعة النتائج</div>
+      <div class="nav-item"><div class="nav-dot"></div> ماستر شيت</div>
+      <div class="nav-item"><div class="nav-dot"></div> إدارة التقارير</div>
+      <div class="nav-item"><div class="nav-dot"></div> درجات سنوات سابقة</div>
+      <div class="nav-item"><div class="nav-dot"></div> توزيع الطلاب</div>
+      <div class="nav-item"><div class="nav-dot"></div> إتلاف حساب الندية</div>
+    </div>
+  </div>
+
+  <div class="alert alert-warning">
+    <div class="alert-icon">⚠️</div>
+    <div>الوحدات المتاحة تعتمد على صلاحيات حسابك. إذا لم تجد وحدة معينة في القائمة، تواصل مع مسؤول النظام للحصول على الصلاحيات اللازمة.</div>
+  </div>
+</div>
+
+
+<!-- ==================== SECTION 2 ==================== -->
+<div class="section" id="sec2">
+  <div class="section-header">
+    <div class="section-num">2</div>
+    <h2>تسجيل الدخول والصفحة الرئيسية</h2>
+  </div>
+
+  <h3 id="sec2-1">2.1 كيفية تسجيل الدخول</h3>
+  <p>للوصول إلى نظام GB System، اتبع الخطوات التالية:</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">افتح المتصفح (يُنصح باستخدام Google Chrome أو Microsoft Edge) وانتقل إلى رابط النظام الذي أرسلته لك الجامعة.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">في صفحة تسجيل الدخول، أدخل <strong>اسم المستخدم</strong> و<strong>كلمة المرور</strong> الخاصة بحسابك الوظيفي.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">انقر على زر <span class="btn-demo btn-red">تسجيل الدخول</span> للدخول إلى النظام.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">بعد الدخول الناجح، ستظهر <strong>الصفحة الرئيسية</strong> مع إحصائيات العام الدراسي الحالي.</div>
+    </div>
+  </div>
+
+  <div class="alert alert-warning">
+    <div class="alert-icon">⚠️</div>
+    <div>في أعلى الشاشة يظهر <strong>اسمك الوظيفي</strong> ورقم الموظف. تأكد أن المعلومات صحيحة قبل البدء بأي عملية.</div>
+  </div>
+
+  <h3 id="sec2-2">2.2 الصفحة الرئيسية والإحصائيات</h3>
+  <p>الصفحة الرئيسية تعرض ملخصاً إحصائياً شاملاً عن الوضع الأكاديمي الحالي:</p>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t055m28s.jpg" alt="الصفحة الرئيسية - الإحصائيات">
+    <div class="screenshot-caption">الصفحة الرئيسية — إحصائيات النظام وأعداد الطلاب ونسب النجاح</div>
+  </div>
+
+  <table class="info-table">
+    <tr>
+      <th>العنصر</th>
+      <th>الوصف</th>
+    </tr>
+    <tr>
+      <td>📊 نسبة النجاح لكل مرحلة</td>
+      <td>رسم بياني شريطي يعرض نسبة النجاح لكل مرحلة دراسية (المرحلة الأولى، الثانية، الثالثة، الرابعة)</td>
+    </tr>
+    <tr>
+      <td>🍩 إجمالي النتائج</td>
+      <td>رسم دائري يوضح توزيع الطلاب (ناجح / راسب / غائب)</td>
+    </tr>
+    <tr>
+      <td>👥 عدد الطلاب لكل مرحلة</td>
+      <td>إحصاء عدد الطلاب المسجلين في كل مرحلة دراسية</td>
+    </tr>
+    <tr>
+      <td>🔍 فلاتر التصفية</td>
+      <td>يمكن تصفية الإحصائيات حسب: نوع الدراسة، القسم، البرنامج الدراسي، السنة، المرحلة</td>
+    </tr>
+  </table>
+
+  <div class="alert alert-info">
+    <div class="alert-icon">ℹ️</div>
+    <div>في الجانب الأيمن العلوي من كل شاشة تجد <strong>شريط التنقل العلوي</strong> الذي يعرض السنة الدراسية الحالية ويتيح التبديل بين السنوات المختلفة (2025-2026، 2024-2025، إلخ).</div>
+  </div>
+</div>
+
+
+<!-- ==================== SECTION 3 ==================== -->
+<div class="section" id="sec3">
+  <div class="section-header">
+    <div class="section-num">3</div>
+    <h2>إدارة الامتحانات</h2>
+  </div>
+
+  <p>
+    وحدة <strong>إدارة الامتحانات</strong> هي المحور الرئيسي للعمل في النظام. من هنا تتحكم في حالة الامتحانات،
+    تفتح باب الاعتراضات، وتتابع تقدم إدخال الدرجات.
+  </p>
+
+  <h3 id="sec3-1">3.1 نظرة عامة على عملية الامتحان</h3>
+  <p>انقر على <strong>إدارة الامتحانات</strong> في القائمة الجانبية لفتح الشاشة الرئيسية:</p>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t030m29s.jpg" alt="شاشة إدارة الامتحانات">
+    <div class="screenshot-caption">شاشة إدارة الامتحانات — نظرة عامة على الفترات الامتحانية وحالتها</div>
+  </div>
+
+  <p>تحتوي هذه الشاشة على:</p>
+  <table class="info-table">
+    <tr>
+      <th>العنصر</th>
+      <th>الوصف</th>
+    </tr>
+    <tr>
+      <td>🔵 شريط تقدم العملية</td>
+      <td>يعرض أربع مراحل رئيسية للعملية الامتحانية، كل مرحلة لها لون مختلف: رمادي (لم تبدأ)، برتقالي (قيد التنفيذ)، أخضر (مكتملة)</td>
+    </tr>
+    <tr>
+      <td>🔴 تغيير حالة الامتحان</td>
+      <td>زر يسمح بتغيير حالة الامتحان إلى مرحلة جديدة</td>
+    </tr>
+    <tr>
+      <td>📋 قائمة الفترات الامتحانية</td>
+      <td>جدول يعرض جميع المواد والفترات الامتحانية مع حالة كل منها</td>
+    </tr>
+    <tr>
+      <td>📊 نسبة النجاح</td>
+      <td>نسبة مئوية تعرض تقدم إدخال الدرجات</td>
+    </tr>
+    <tr>
+      <td>🔢 أزرار المراحل</td>
+      <td>أزرار تصفية: جميع المراحل، المرحلة 1، المرحلة 2، المرحلة 3، المرحلة 4</td>
+    </tr>
+  </table>
+
+  <h4>قراءة بيانات جدول الفترات الامتحانية:</h4>
+  <table class="info-table">
+    <tr>
+      <th>العمود</th>
+      <th>المعنى</th>
+    </tr>
+    <tr>
+      <td>السنة الدراسية</td>
+      <td>السنة الأكاديمية المرتبطة بهذه الفترة</td>
+    </tr>
+    <tr>
+      <td>نوع الدراسة</td>
+      <td>صباحي / مسائي</td>
+    </tr>
+    <tr>
+      <td>البرنامج الدراسي</td>
+      <td>اسم البرنامج (هندسة، رياضيات، إلخ)</td>
+    </tr>
+    <tr>
+      <td>السنة / المرحلة</td>
+      <td>رقم المرحلة الدراسية</td>
+    </tr>
+    <tr>
+      <td>الأيقونات</td>
+      <td>
+        أيقونة 👤 لعرض تفاصيل الطلاب |
+        أيقونة 📄 لعرض الوثائق |
+        أيقونة 🔔 للإشعارات
+      </td>
+    </tr>
+  </table>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t038m29s.jpg" alt="شاشة الفترات مع مرحلتين نشطتين">
+    <div class="screenshot-caption">شاشة الفترات الامتحانية — مع تفعيل مرحلتين (إدخال الدرجات والمصادقة)</div>
+  </div>
+
+  <h3 id="sec3-2">3.2 تغيير حالة الامتحان</h3>
+  <p>
+    تغيير حالة الامتحان يتيح الانتقال من مرحلة إلى أخرى في دورة حياة النظام.
+    انقر على زر <span class="btn-demo btn-red">🔴 تغيير حالة الامتحان</span> لفتح نافذة التغيير:
+  </p>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t031m29s.jpg" alt="نافذة تغيير حالة الامتحان">
+    <div class="screenshot-caption">نافذة تغيير حالة الامتحان — اختيار الحالة الجديدة</div>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">انقر على زر <span class="btn-demo btn-red">تغيير حالة الامتحان</span> في أعلى الشاشة.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">ستظهر نافذة <strong>"تغيير حالة الامتحان"</strong>. من قائمة <strong>"اختر حالة الامتحان"</strong> حدد الحالة المطلوبة:
+        <ul style="margin-top: 8px; margin-right: 20px; line-height: 2;">
+          <li><strong>إدخال الدرجات</strong> — لفتح النظام لإدخال درجات الامتحان</li>
+          <li><strong>الدرجات الإضافية</strong> — لإضافة درجات إضافية</li>
+          <li><strong>اعتراضات</strong> — لتحويل الحالة إلى مرحلة الاعتراضات</li>
+        </ul>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">انقر <span class="btn-demo btn-red">حفظ</span> لتطبيق التغيير، أو <span class="btn-demo btn-gray">إلغاء</span> للتراجع.</div>
+    </div>
+  </div>
+
+  <div class="alert alert-danger">
+    <div class="alert-icon">🚨</div>
+    <div><strong>تنبيه مهم:</strong> تغيير حالة الامتحان يؤثر على جميع المواد في الفترة الامتحانية المحددة. تأكد من صحة اختيارك قبل الحفظ لأن بعض التغييرات لا يمكن التراجع عنها.</div>
+  </div>
+
+  <h3 id="sec3-3">3.3 فتح باب الاعتراضات</h3>
+  <p>عند تحويل الحالة إلى <strong>اعتراضات</strong>، تظهر حقول إضافية لتحديد فترة الاعتراضات:</p>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t033m29s.jpg" alt="نافذة تحديد فترة الاعتراضات">
+    <div class="screenshot-caption">نافذة تحديد فترة الاعتراضات — تحديد تاريخ البداية والنهاية</div>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">اختر <strong>"اعتراضات"</strong> من قائمة حالة الامتحان.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">في قسم <strong>"فترة الاعتراضات"</strong>، حدد:
+        <ul style="margin-top: 8px; margin-right: 20px; line-height: 2;">
+          <li><strong>من:</strong> تاريخ بداية قبول الاعتراضات</li>
+          <li><strong>إلى:</strong> تاريخ انتهاء قبول الاعتراضات</li>
+        </ul>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">انقر <span class="btn-demo btn-red">حفظ</span> لتفعيل فترة الاعتراضات. سيتمكن الطلاب من تقديم اعتراضاتهم خلال هذه الفترة فقط.</div>
+    </div>
+  </div>
+
+  <h3 id="sec3-4">3.4 تصفية الفترات الامتحانية</h3>
+  <p>يمكن تصفية قائمة الفترات الامتحانية باستخدام الفلاتر المتاحة في أعلى الجدول:</p>
+  <table class="info-table">
+    <tr>
+      <th>الفلتر</th>
+      <th>الخيارات</th>
+    </tr>
+    <tr>
+      <td>السنة الدراسية</td>
+      <td>2024-2025، 2023-2024، وما قبلها</td>
+    </tr>
+    <tr>
+      <td>نوع الدراسة</td>
+      <td>الكل / صباحي / مسائي</td>
+    </tr>
+    <tr>
+      <td>البرنامج الدراسي</td>
+      <td>جميع البرامج أو برنامج محدد</td>
+    </tr>
+    <tr>
+      <td>القسم</td>
+      <td>جميع الأقسام أو قسم محدد</td>
+    </tr>
+    <tr>
+      <td>المرحلة</td>
+      <td>جميع المراحل / مرحلة 1 / 2 / 3 / 4</td>
+    </tr>
+  </table>
+</div>
+
+
+<!-- ==================== SECTION 4 ==================== -->
+<div class="section" id="sec4">
+  <div class="section-header">
+    <div class="section-num">4</div>
+    <h2>قوائم درجات الطلاب</h2>
+  </div>
+
+  <p>
+    هذه الوحدة هي المكان الرئيسي لإدخال ومراجعة وإدارة درجات الطلاب.
+    انقر على <strong>قوائم درجات الطلاب</strong> في القائمة الجانبية.
+  </p>
+
+  <h3 id="sec4-1">4.1 الوصول إلى قوائم الدرجات</h3>
+
+  <div class="screenshot-box">
+    <img src="frames/vid2_t030m29s.jpg" alt="شاشة قوائم درجات الطلاب">
+    <div class="screenshot-caption">شاشة قوائم درجات الطلاب — عرض جميع قوائم الطلاب</div>
+  </div>
+
+  <p>تحتوي هذه الشاشة على ثلاثة أزرار رئيسية في أعلاها:</p>
+  <ul style="margin: 10px 0 15px 0; padding-right: 20px; line-height: 2.2;">
+    <li><span class="btn-demo btn-red">🖨️ طباعة</span> — طباعة القوائم</li>
+    <li><span class="btn-demo btn-red">✏️ تعديل الدرجات</span> — الدخول إلى وضع تعديل الدرجات</li>
+    <li><span class="btn-demo btn-red">📊 توليد قوائم الدرجات</span> — إنشاء قوائم درجات جديدة</li>
+  </ul>
+
+  <h4>فلاتر التصفية المتاحة:</h4>
+  <table class="info-table">
+    <tr>
+      <th>الفلتر</th>
+      <th>الوصف</th>
+    </tr>
+    <tr>
+      <td>نوع الدراسة</td>
+      <td>صباحي / مسائي</td>
+    </tr>
+    <tr>
+      <td>القسم</td>
+      <td>اسم القسم الأكاديمي</td>
+    </tr>
+    <tr>
+      <td>البرنامج الدراسي</td>
+      <td>اسم البرنامج (هندسة الحاسوب، الرياضيات، إلخ)</td>
+    </tr>
+    <tr>
+      <td>السنة الدراسية</td>
+      <td>2024-2025 أو سنوات سابقة</td>
+    </tr>
+    <tr>
+      <td>المرحلة</td>
+      <td>المرحلة الأولى / الثانية / الثالثة / الرابعة</td>
+    </tr>
+    <tr>
+      <td>الدور</td>
+      <td>الدور الأول</td>
+    </tr>
+    <tr>
+      <td>البحث باسم الطالب</td>
+      <td>بحث سريع باسم الطالب أو رقمه</td>
+    </tr>
+  </table>
+
+  <h3 id="sec4-2">4.2 توليد قوائم الدرجات</h3>
+  <p>
+    قبل إدخال الدرجات، يجب توليد قوائم الدرجات للمواد المطلوبة:
+  </p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">انقر على زر <span class="btn-demo btn-red">📊 توليد قوائم الدرجات</span> في أعلى الشاشة.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">اختر القسم والبرنامج الدراسي والمرحلة المطلوبة من الفلاتر.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">سيقوم النظام تلقائياً بإنشاء قوائم الدرجات لجميع الطلاب المسجلين في هذه المواد.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">بعد التوليد الناجح، ستظهر القوائم في جدول الشاشة الرئيسية جاهزة للإدخال.</div>
+    </div>
+  </div>
+
+  <div class="alert alert-warning">
+    <div class="alert-icon">⚠️</div>
+    <div>إذا لم تظهر أي بيانات في الشاشة (ظهرت صورة "عذراً لا توجد بيانات")، فهذا يعني أن قوائم الدرجات لم تُولَّد بعد لهذه المرحلة. انقر على <strong>توليد قوائم الدرجات</strong> أولاً.</div>
+  </div>
+
+  <h3 id="sec4-3">4.3 إدارة الدرجات وإدخالها</h3>
+  <p>بعد توليد القوائم، انقر على أيقونة التعديل بجانب أي مادة للدخول إلى شاشة إدخال الدرجات:</p>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t045m28s.jpg" alt="شاشة إدارة الدرجات">
+    <div class="screenshot-caption">شاشة إدارة الدرجات / إضافة الدرجات للطلاب — قائمة الطلاب بحالاتهم</div>
+  </div>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t044m28s.jpg" alt="شاشة إدخال الدرجات التفصيلية">
+    <div class="screenshot-caption">شاشة إدخال الدرجات التفصيلية — درجات كل طالب حسب المادة</div>
+  </div>
+
+  <h4>هيكل جدول إدخال الدرجات:</h4>
+  <table class="info-table">
+    <tr>
+      <th>العمود</th>
+      <th>الوصف</th>
+    </tr>
+    <tr>
+      <td>اسم الطالب</td>
+      <td>الاسم الثلاثي للطالب</td>
+    </tr>
+    <tr>
+      <td>الرقم الجامعي</td>
+      <td>الرقم الأكاديمي المميز لكل طالب</td>
+    </tr>
+    <tr>
+      <td>درجة السعي</td>
+      <td>درجة الأعمال الفصلية (الاختبارات اليومية، الحضور، الواجبات)</td>
+    </tr>
+    <tr>
+      <td>درجة الامتحان النهائي</td>
+      <td>الدرجة المقدرة من 100 للامتحان النهائي</td>
+    </tr>
+    <tr>
+      <td>المجموع</td>
+      <td>مجموع درجة السعي + درجة النهائي</td>
+    </tr>
+    <tr>
+      <td>الحالة</td>
+      <td><span class="badge-status badge-pass">اجتاز</span> <span class="badge-status badge-fail">رسب</span> <span class="badge-status badge-absent">غياب</span></td>
+    </tr>
+    <tr>
+      <td>أيقونة التحقق</td>
+      <td>🟢 أخضر = تم التحقق | 🔴 أحمر = بحاجة مراجعة</td>
+    </tr>
+  </table>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">من شاشة إدارة الامتحانات أو قوائم الدرجات، انقر على أيقونة <strong>✏️</strong> أو زر <strong>تعديل الدرجات</strong> بجانب المادة المطلوبة.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">ستظهر قائمة الطلاب المسجلين في المادة. انقر على اسم الطالب أو أيقونة التعديل لفتح حقول إدخال الدرجة.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">أدخل <strong>درجة الامتحان النهائي</strong> في الحقل المخصص. سيحتسب النظام المجموع تلقائياً.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">انقر على <span class="btn-demo btn-red">حفظ</span> بعد إدخال كل درجة، أو استخدم <span class="btn-demo btn-red">حفظ الكل</span> لحفظ جميع الدرجات دفعة واحدة.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-content">بعد الحفظ، يتحول مؤشر الطالب إلى <strong>🟢 أخضر</strong> ما يعني تسجيل درجته بنجاح.</div>
+    </div>
+  </div>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t082m28s.jpg" alt="شاشة درجات الطلاب للمادة">
+    <div class="screenshot-caption">شاشة درجات الطلاب — عرض تفصيلي لدرجات كل طالب في المادة</div>
+  </div>
+
+  <div class="alert alert-info">
+    <div class="alert-icon">ℹ️</div>
+    <div>يمكن تصفية الطلاب حسب: <strong>دقة التحقق</strong> (محقق / غير محقق) | <strong>الحالة</strong> (اجتاز / رسب / غياب). هذا يسهّل التركيز على الطلاب الذين لم تُدخَل درجاتهم بعد.</div>
+  </div>
+
+  <h3 id="sec4-4">4.4 حالات الطلاب</h3>
+  <table class="info-table">
+    <tr>
+      <th>الحالة</th>
+      <th>المعنى</th>
+      <th>الإجراء</th>
+    </tr>
+    <tr>
+      <td><span class="badge-status badge-pass">اجتاز</span></td>
+      <td>الطالب حصل على درجة نجاح</td>
+      <td>لا يحتاج إجراء إضافي</td>
+    </tr>
+    <tr>
+      <td><span class="badge-status badge-fail">رسب</span></td>
+      <td>الطالب لم يحقق درجة النجاح</td>
+      <td>مراجعة الدرجة والتأكد من صحة الإدخال</td>
+    </tr>
+    <tr>
+      <td><span class="badge-status badge-absent">غياب</span></td>
+      <td>الطالب غاب عن الامتحان</td>
+      <td>تأكيد الغياب أو إدخال درجة صفر</td>
+    </tr>
+    <tr>
+      <td><span class="badge-status badge-pending">قيد الانتظار</span></td>
+      <td>لم تُدخَل الدرجة بعد</td>
+      <td>إدخال الدرجة في أقرب وقت</td>
+    </tr>
+  </table>
+</div>
+
+
+<!-- ==================== SECTION 5 ==================== -->
+<div class="section" id="sec5">
+  <div class="section-header">
+    <div class="section-num">5</div>
+    <h2>إدارة الاعتراضات</h2>
+  </div>
+
+  <p>
+    بعد إعلان النتائج وفتح باب الاعتراضات، يتمكن الطلاب من تقديم اعتراضات على درجاتهم.
+    انقر على <strong>إدارة الاعتراضات</strong> في القائمة الجانبية لمتابعة هذه الاعتراضات.
+  </p>
+
+  <div class="alert alert-info">
+    <div class="alert-icon">ℹ️</div>
+    <div>تظهر هذه الوحدة الاعتراضات فقط خلال الفترة الزمنية المحددة لقبول الاعتراضات. بعد انتهاء هذه الفترة، تُغلق تلقائياً ولا يمكن تقديم اعتراضات جديدة.</div>
+  </div>
+
+  <h3 id="sec5-1">5.1 عرض الاعتراضات</h3>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">انقر على <strong>إدارة الاعتراضات</strong> في القائمة الجانبية.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">ستظهر قائمة بجميع الاعتراضات المقدمة، تتضمن: اسم الطالب، المادة، الدرجة الحالية، سبب الاعتراض، وتاريخ التقديم.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">يمكن تصفية الاعتراضات حسب: القسم، البرنامج، المرحلة، أو حالة الاعتراض (جديد / قيد المراجعة / مُنجز).</div>
+    </div>
+  </div>
+
+  <h3 id="sec5-2">5.2 معالجة الاعتراض</h3>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">انقر على الاعتراض المراد معالجته لفتح تفاصيله.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">راجع ورقة إجابة الطالب والدرجة المدخلة في النظام.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">إذا كان الاعتراض مقبولاً: عدّل الدرجة في النظام وانقر <span class="btn-demo btn-red">قبول الاعتراض</span>.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">إذا كان الاعتراض مرفوضاً: انقر <span class="btn-demo btn-gray">رفض الاعتراض</span> مع كتابة سبب الرفض.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-content">سيُحدَّث نظام الطالب تلقائياً بقرار الاعتراض.</div>
+    </div>
+  </div>
+
+  <div class="alert alert-warning">
+    <div class="alert-icon">⚠️</div>
+    <div>قبول الاعتراض يُعدّل الدرجة في قاعدة البيانات مباشرةً. تأكد من مراجعة الدرجة الجديدة بدقة قبل الحفظ النهائي.</div>
+  </div>
+</div>
+
+
+<!-- ==================== SECTION 6 ==================== -->
+<div class="section" id="sec6">
+  <div class="section-header">
+    <div class="section-num">6</div>
+    <h2>إدارة درجة المعادلة</h2>
+  </div>
+
+  <p>
+    تُستخدم هذه الوحدة لإدارة قرارات معادلة المواد الدراسية للطلاب المحوّلين أو القادمين من جامعات أخرى.
+    انقر على <strong>إدارة درجة المعادلة</strong> في القائمة الجانبية.
+  </p>
+
+  <h3 id="sec6-1">6.1 قرارات المعادلة</h3>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t043m58s.jpg" alt="شاشة قرارات المعادلة">
+    <div class="screenshot-caption">شاشة قرارات المعادلة — قائمة القرارات المسجلة</div>
+  </div>
+
+  <p>تعرض هذه الشاشة جميع قرارات المعادلة المسجلة، مع التفاصيل التالية:</p>
+  <table class="info-table">
+    <tr>
+      <th>العمود</th>
+      <th>الوصف</th>
+    </tr>
+    <tr>
+      <td>السنة الدراسية</td>
+      <td>السنة التي صدر فيها قرار المعادلة</td>
+    </tr>
+    <tr>
+      <td>رقم الكتاب</td>
+      <td>الرقم الرسمي للكتاب/القرار الصادر</td>
+    </tr>
+    <tr>
+      <td>تاريخ الكتاب</td>
+      <td>تاريخ صدور القرار الرسمي</td>
+    </tr>
+    <tr>
+      <td>عدد المستفيدين</td>
+      <td>عدد الطلاب المشمولين بقرار المعادلة</td>
+    </tr>
+    <tr>
+      <td>عدد المواد المعادَلة</td>
+      <td>عدد المواد التي شملها القرار</td>
+    </tr>
+    <tr>
+      <td>ملف PDF</td>
+      <td>الوثيقة الرسمية المرفقة للقرار</td>
+    </tr>
+  </table>
+
+  <h3 id="sec6-2">6.2 إضافة قرار معادلة جديد</h3>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t042m29s.jpg" alt="نافذة إضافة قرار معادلة">
+    <div class="screenshot-caption">نافذة إضافة قرار معادلة جديد — ملء بيانات القرار</div>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">انقر على زر <span class="btn-demo btn-red">+ إضافة قرار معادلة</span> في أعلى الشاشة.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">في النافذة الظاهرة، أدخل البيانات المطلوبة:
+        <ul style="margin-top: 8px; margin-right: 20px; line-height: 2.2;">
+          <li><strong>السنة الدراسية:</strong> اختر السنة من القائمة المنسدلة</li>
+          <li><strong>البرنامج الدراسي:</strong> اختر البرنامج المعني</li>
+          <li><strong>تاريخ القرار:</strong> حدد التاريخ من التقويم</li>
+          <li><strong>رقم الكتاب:</strong> أدخل الرقم الرسمي للكتاب</li>
+          <li><strong>الوصف / الملاحظات:</strong> أي تفاصيل إضافية</li>
+          <li><strong>ملف PDF:</strong> ارفع نسخة من القرار الرسمي</li>
+        </ul>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">انقر <span class="btn-demo btn-red">إضافة</span> لحفظ القرار في النظام.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">بعد إضافة القرار، انتقل لتعيين المواد المعادلة والطلاب المشمولين عبر الأيقونات الظاهرة بجانب القرار.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ==================== SECTION 7 ==================== -->
+<div class="section" id="sec7">
+  <div class="section-header">
+    <div class="section-num">7</div>
+    <h2>طباعة النتائج</h2>
+  </div>
+
+  <p>
+    وحدة <strong>طباعة النتائج</strong> تتيح طباعة شهادات النتائج وكشوف الدرجات الرسمية للطلاب.
+    انقر على <strong>طباعة النتائج</strong> في القائمة الجانبية.
+  </p>
+
+  <h3 id="sec7-1">7.1 إدارة طباعة النتائج</h3>
+
+  <div class="screenshot-box">
+    <img src="frames/vid2_t070m28s.jpg" alt="شاشة إدارة طباعة النتائج">
+    <div class="screenshot-caption">شاشة إدارة طباعة النتائج — قائمة الطلاب وحالات طباعة نتائجهم</div>
+  </div>
+
+  <p>تعرض هذه الشاشة:</p>
+  <table class="info-table">
+    <tr>
+      <th>العمود</th>
+      <th>الوصف</th>
+    </tr>
+    <tr>
+      <td>اسم الطالب والرقم الجامعي</td>
+      <td>معرّفات الطالب</td>
+    </tr>
+    <tr>
+      <td>البرنامج الدراسي والمرحلة</td>
+      <td>القسم والمرحلة الدراسية</td>
+    </tr>
+    <tr>
+      <td>الدور</td>
+      <td>الدور الأول / الثاني</td>
+    </tr>
+    <tr>
+      <td>حالة الطباعة</td>
+      <td><span class="badge-status badge-pass">مطبوع</span> أو <span class="badge-status badge-pending">غير مطبوع</span></td>
+    </tr>
+    <tr>
+      <td>تاريخ الطباعة</td>
+      <td>متى تمت آخر طباعة لنتيجة هذا الطالب</td>
+    </tr>
+    <tr>
+      <td>حالة النتيجة</td>
+      <td><span class="badge-status badge-pending">مبدئية</span> أو <span class="badge-status badge-pass">رسمية</span></td>
+    </tr>
+  </table>
+
+  <h3 id="sec7-2">7.2 طباعة شهادات الطلاب</h3>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">من شاشة طباعة النتائج، استخدم الفلاتر لتحديد المجموعة المطلوبة (القسم، البرنامج، المرحلة، السنة).</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">لطباعة نتيجة طالب واحد: انقر على أيقونة الطباعة 🖨️ بجانب اسمه.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">لطباعة نتائج جميع الطلاب دفعة واحدة: انقر على <span class="btn-demo btn-red">🖨️ طباعة النتائج</span> في أعلى الشاشة.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">اختر نوع الطباعة:
+        <ul style="margin-top: 8px; margin-right: 20px; line-height: 2;">
+          <li><strong>مبدئية:</strong> نتائج غير رسمية للمراجعة الداخلية</li>
+          <li><strong>رسمية:</strong> النتائج النهائية المعتمدة (تحتاج صلاحيات مسؤول)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-content">لتحويل النتائج من مبدئية إلى رسمية، انقر على زر <span class="btn-demo btn-red">↔️ تغيير النهائي/الرسمي</span>.</div>
+    </div>
+  </div>
+
+  <div class="alert alert-danger">
+    <div class="alert-icon">🚨</div>
+    <div><strong>تحذير:</strong> الطباعة الرسمية للنتائج لا يمكن التراجع عنها. تأكد من اكتمال جميع الدرجات وعدم وجود اعتراضات مفتوحة قبل طباعة النتائج الرسمية.</div>
+  </div>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t065m28s.jpg" alt="شاشة طباعة النتائج مع قائمة السنوات">
+    <div class="screenshot-caption">شاشة طباعة النتائج — اختيار السنة الدراسية للطباعة</div>
+  </div>
+</div>
+
+
+<!-- ==================== SECTION 8 ==================== -->
+<div class="section" id="sec8">
+  <div class="section-header">
+    <div class="section-num">8</div>
+    <h2>ماستر شيت والتقارير</h2>
+  </div>
+
+  <p>
+    <strong>ماستر شيت</strong> هو ملف إكسل شامل يحتوي على جميع درجات الطلاب لفصل دراسي أو سنة بأكملها.
+    يُستخدم للمراجعة الشاملة والأرشفة.
+  </p>
+
+  <h3>8.1 استخراج ماستر شيت</h3>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">انقر على <strong>ماستر شيت</strong> في القائمة الجانبية.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">حدد المعايير المطلوبة: السنة الدراسية، القسم، البرنامج، المرحلة.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">انقر على <span class="btn-demo btn-red">⬇️ تصدير</span> لتحميل ملف الإكسل الشامل.</div>
+    </div>
+  </div>
+
+  <h3>8.2 التقارير المتاحة</h3>
+  <p>انقر على <strong>إدارة التقارير</strong> في القائمة الجانبية للوصول إلى التقارير التالية:</p>
+  <table class="info-table">
+    <tr>
+      <th>التقرير</th>
+      <th>الوصف</th>
+    </tr>
+    <tr>
+      <td>📊 تقرير نسب النجاح</td>
+      <td>نسب النجاح والرسوب لكل مادة ومرحلة</td>
+    </tr>
+    <tr>
+      <td>📋 تقرير الغيابات</td>
+      <td>قائمة الطلاب الغائبين عن الامتحانات</td>
+    </tr>
+    <tr>
+      <td>📈 التقرير الإحصائي الشامل</td>
+      <td>إحصاءات تفصيلية للعملية الامتحانية بأكملها</td>
+    </tr>
+    <tr>
+      <td>📝 تقرير الاعتراضات</td>
+      <td>ملخص الاعتراضات المقدمة ونتائجها</td>
+    </tr>
+  </table>
+</div>
+
+
+<!-- ==================== SECTION 9 ==================== -->
+<div class="section" id="sec9">
+  <div class="section-header">
+    <div class="section-num">9</div>
+    <h2>أعداد اللجنة الامتحانية</h2>
+  </div>
+
+  <p>
+    هذه الوحدة مخصصة لإعداد وتنظيم اللجنة الامتحانية وتعيين أعضائها.
+  </p>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t075m28s.jpg" alt="شاشة أعداد اللجنة الامتحانية">
+    <div class="screenshot-caption">شاشة أعداد اللجنة الامتحانية — عرض أعضاء اللجنة وإحصاءاتهم</div>
+  </div>
+
+  <h3 id="sec9-1">9.1 إعداد اللجنة الامتحانية</h3>
+  <p>
+    يجب إنشاء لجنة امتحانية في نظام SIS قبل إنشاء أي فترة امتحانية في نظام اللجنة الامتحانية. للوصول إلى إعداد اللجنة قم بالدخول إلى نظام SIS بصلاحية رئيس القسم أو المستخدم الذي تُسند إليه صلاحية إدارة اللجان الامتحانية ثم اذهب إلى قسم أعداد اللجنة الامتحانية من القائمة الجانبية.
+  </p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">تظهر لك قائمة بجميع اللجان الامتحانية المنشأة مسبقاً.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">انقر على زر <strong>+ إضافة أعداد اللجنة الامتحانية</strong> لإنشاء لجنة جديدة.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">املأ <strong>المعلومات العامة</strong>: السنة الدراسية، الفصل الدراسي، الهيكل التنظيمي (القسم العلمي)، البرنامج الدراسي، والمرحلة أو المراحل الدراسية.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">يتيح النظام إمكانية <strong>رفع المستندات الرسمية</strong> المتعلقة بتشكيل اللجنة مثل الكتب الرسمية الصادرة بخصوص تشكيل لجان الامتحان والتدقيق لأغراض التوثيق والأرشفة.</div>
+    </div>
+  </div>
+
+  <div class="screenshot-box">
+    <img src="frames/vid1_t075m28s.jpg" alt="شاشة أعداد اللجنة الامتحانية" style="width: 100%; border-radius: 8px;">
+    <div class="screenshot-caption">شاشة إعداد وتعيين أعضاء اللجنة الامتحانية وتحديد أدوارهم</div>
+  </div>
+
+  <h3 id="sec9-2">9.2 تعيين الأعضاء والأدوار والصلاحيات</h3>
+  <p>في قسم أعضاء اللجنة يتم تعيين الأعضاء وتحديد أدوارهم حيث يجب أن تحتوي اللجنة على أربعة أدوار رئيسية يتم تحديدها من القائمة المنسدلة:</p>
+  
+  <table class="info-table">
+    <tr>
+      <th>الدور</th>
+      <th>الصلاحيات والمهام</th>
+    </tr>
+    <tr>
+      <td><strong>رئيس اللجنة الامتحانية</strong><br><small>(واحد على الأقل)</small></td>
+      <td>يملك إدارة كاملة. مسؤول عن إدخال وتعديل الدرجات، إدارة حالات الامتحان، وبدء الموافقات ونقل الحالة إلى التدقيق.</td>
+    </tr>
+    <tr>
+      <td><strong>عضو اللجنة الامتحانية</strong></td>
+      <td>مسؤول عن إدخال وتعديل الدرجات وسجلات الحضور للطلاب.</td>
+    </tr>
+    <tr>
+      <td><strong>رئيس لجنة التدقيق</strong><br><small>(واحد على الأقل)</small></td>
+      <td>مسؤول عن مراجعة الدرجات، قبول أو رفض السجلات، وإنهاء عملية التدقيق بالكامل للمادة.</td>
+    </tr>
+    <tr>
+      <td><strong>عضو لجنة التدقيق</strong></td>
+      <td>مسؤول عن مراجعة الدرجات وقبول أو رفض السجلات الفردية للطلاب.</td>
+    </tr>
+  </table>
+
+  <div class="alert alert-info">
+    <div class="alert-icon">ℹ️</div>
+    <div><strong>التسلسل الهرمي للموافقات:</strong> تمر الموافقات بثلاثة مستويات: <br>1. موافقة رئيس اللجنة الامتحانية.<br>2. موافقة رئيس القسم.<br>3. موافقة عميد الكلية.<br> يرى كل مستخدم فقط البيانات التابعة لهيكله التنظيمي.</div>
+  </div>
+</div>
+
+
+<!-- ==================== SECTION 10 ==================== -->
+<div class="section" id="sec10">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <h2>درجات سنوات سابقة وتوزيع الطلاب</h2>
+  </div>
+
+  <h3>10.1 درجات سنوات سابقة</h3>
+  <p>
+    تتيح هذه الوحدة الاطلاع على درجات الطلاب من السنوات الأكاديمية السابقة.
+    مفيدة للمقارنة والمرجعية.
+  </p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">انقر على <strong>درجات سنوات سابقة</strong> في القائمة الجانبية.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">اختر السنة الدراسية المطلوبة من القائمة المنسدلة (تبدأ من 2015-2016 وحتى الحالية).</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">استخدم فلاتر القسم والبرنامج والمرحلة لتضييق نتائج البحث.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">يمكن تصدير البيانات عبر زر <span class="btn-demo btn-red">⬇️ تصدير</span>.</div>
+    </div>
+  </div>
+
+  <div class="alert alert-info">
+    <div class="alert-icon">ℹ️</div>
+    <div>درجات السنوات السابقة للعرض والاطلاع فقط. لا يمكن تعديلها من هذه الشاشة إلا بموافقة مسؤول النظام.</div>
+  </div>
+
+  <h3>10.2 توزيع الطلاب</h3>
+  <p>
+    وحدة <strong>توزيع الطلاب</strong> تُستخدم لتوزيع الطلاب على قاعات الامتحان.
+  </p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">انقر على <strong>توزيع الطلاب</strong> في القائمة الجانبية.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">حدد المادة والمرحلة والموعد الامتحاني.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">سيعرض النظام قائمة الطلاب المسجلين مع القاعة المعيّنة لكل طالب.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">انقر على <span class="btn-demo btn-red">🖨️ طباعة</span> لطباعة كشوف التوزيع.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ==================== QUICK REFERENCE ==================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">📌</div>
+    <h2>مرجع سريع — الأزرار الأكثر استخداماً</h2>
+  </div>
+
+  <table class="info-table">
+    <tr>
+      <th>الزر</th>
+      <th>الموقع</th>
+      <th>الوظيفة</th>
+    </tr>
+    <tr>
+      <td><span class="btn-demo btn-red">تغيير حالة الامتحان</span></td>
+      <td>إدارة الامتحانات</td>
+      <td>تغيير مرحلة الامتحان (إدخال / اعتراضات / إعلان)</td>
+    </tr>
+    <tr>
+      <td><span class="btn-demo btn-red">توليد قوائم الدرجات</span></td>
+      <td>قوائم درجات الطلاب</td>
+      <td>إنشاء قوائم درجات فارغة للمواد</td>
+    </tr>
+    <tr>
+      <td><span class="btn-demo btn-red">تعديل الدرجات</span></td>
+      <td>قوائم درجات الطلاب</td>
+      <td>الدخول إلى وضع إدخال وتعديل الدرجات</td>
+    </tr>
+    <tr>
+      <td><span class="btn-demo btn-red">طباعة النتائج</span></td>
+      <td>طباعة النتائج</td>
+      <td>طباعة شهادات نتائج الطلاب</td>
+    </tr>
+    <tr>
+      <td><span class="btn-demo btn-red">+ إضافة قرار معادلة</span></td>
+      <td>إدارة درجة المعادلة</td>
+      <td>إضافة قرار معادلة مواد جديد</td>
+    </tr>
+    <tr>
+      <td><span class="btn-demo btn-red">إعادة أعداد اللجنة</span></td>
+      <td>أعداد اللجنة الامتحانية</td>
+      <td>إعادة تنظيم أعضاء اللجنة الامتحانية</td>
+    </tr>
+    <tr>
+      <td><span class="btn-demo btn-gray">إلغاء</span></td>
+      <td>جميع النوافذ</td>
+      <td>إغلاق النافذة دون حفظ أي تغييرات</td>
+    </tr>
+  </table>
+
+  <div class="divider"></div>
+
+  <h3>تسلسل العمل الموصى به (Workflow)</h3>
+  <div class="progress-tracker">
+    <div class="pt-step pt-done">1. توليد القوائم</div>
+    <div class="pt-step pt-done">2. إدخال درجات السعي</div>
+    <div class="pt-step pt-active">3. إدخال درجات النهائي</div>
+    <div class="pt-step pt-todo">4. تدقيق الدرجات</div>
+    <div class="pt-step pt-todo">5. المصادقة</div>
+    <div class="pt-step pt-todo">6. الاعتراضات</div>
+    <div class="pt-step pt-todo">7. إعلان النتائج</div>
+  </div>
+</div>
+
+
+<!-- ==================== TIPS ==================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">💡</div>
+    <h2>نصائح وأخطاء شائعة</h2>
+  </div>
+
+  <div class="alert alert-success">
+    <div class="alert-icon">✅</div>
+    <div><strong>احفظ بانتظام:</strong> انقر على زر الحفظ بعد كل إدخال مجموعة من الدرجات. لا يحفظ النظام تلقائياً.</div>
+  </div>
+
+  <div class="alert alert-success">
+    <div class="alert-icon">✅</div>
+    <div><strong>تحقق من الفلاتر:</strong> قبل أي عملية إدخال، تأكد أن فلاتر القسم والبرنامج والسنة والمرحلة محددة بشكل صحيح.</div>
+  </div>
+
+  <div class="alert alert-success">
+    <div class="alert-icon">✅</div>
+    <div><strong>تابع نسبة الإنجاز:</strong> يظهر في أسفل شاشة إدارة الامتحانات "نسبة النجاح للمرحلة" — تأكد وصولها إلى 100% قبل المصادقة.</div>
+  </div>
+
+  <div class="alert alert-warning">
+    <div class="alert-icon">⚠️</div>
+    <div><strong>خطأ شائع:</strong> إدخال درجة أعلى من الحد الأقصى للمادة. تأكد من معرفة الدرجة القصوى لكل مادة قبل الإدخال.</div>
+  </div>
+
+  <div class="alert alert-warning">
+    <div class="alert-icon">⚠️</div>
+    <div><strong>خطأ شائع:</strong> نسيان تغيير حالة الامتحان بعد اكتمال إدخال الدرجات. يجب تغيير الحالة يدوياً للانتقال للمرحلة التالية.</div>
+  </div>
+
+  <div class="alert alert-danger">
+    <div class="alert-icon">🚨</div>
+    <div><strong>تحذير:</strong> لا تشارك كلمة مرورك مع أي شخص. كل إجراء في النظام يُسجَّل باسم المستخدم الداخل حالياً.</div>
+  </div>
+</div>
+
+</div><!-- end .container -->
+
+<div class="footer">
+  <p>دليل نظام GB System — مرجع غير رسمي بإعداد ذاتي</p>
+  <p style="opacity:.85;font-size:.9rem;margin-top:6px;">غير صادر عن وزارة التعليم العالي والبحث العلمي ولا عن أي جهة رسمية.</p>
+  <p>للدعم الفني والاستفسارات تواصل مع وحدة تقنية المعلومات في الجامعة</p>
+</div>
+
+<!-- Image Zoom Modal -->
+<div id="imageModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.9); cursor:pointer;">
+  <span style="position:absolute; top:15px; right:35px; color:#f1f1f1; font-size:40px; font-weight:bold; transition:0.3s; cursor:pointer;" onclick="document.getElementById('imageModal').style.display='none'">&times;</span>
+  <img id="modalImg" style="margin:auto; display:block; width:80%; max-width:1200px; padding-top: 50px;">
+</div>
+<script>
+  document.querySelectorAll('.screenshot-box img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function() {
+      var modal = document.getElementById('imageModal');
+      var modalImg = document.getElementById('modalImg');
+      modal.style.display = 'block';
+      modalImg.src = this.src;
+    });
+  });
+  document.getElementById('imageModal').addEventListener('click', function() {
+    this.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

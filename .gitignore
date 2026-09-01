@@ -1,0 +1,4 @@
+# لا تُرفع الملفات الأصلية أبداً — تُنشر النسخ المشفّرة (.enc) فقط.
+# Only the encrypted .enc copies are published; plaintext never goes up.
+*.mp4
+*.pdf
