@@ -2,3 +2,9 @@
 # Only the encrypted .enc copies are published; plaintext never goes up.
 *.mp4
 *.pdf
+
+# استثناء: أدلة منشورة علناً على بوابة الدعم الوزارية — تُرفع بلا تشفير
+# Exception: guides the ministry already publishes openly — shipped unencrypted.
+!docs/pg-sis-guide.pdf
+!docs/student-services-guide.pdf
+!ورش اللجنة الامتحانية/GB User Manual_Arabic_V1.pdf

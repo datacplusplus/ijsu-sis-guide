@@ -920,8 +920,8 @@
         <div class="ico">🌐</div><div><b>البوابة الرسمية للوزارة</b><small>e.mohesr.gov.iq — منصة HEPIQ</small></div></a>
       <a class="res" href="دليل_نظام_GB.html">
         <div class="ico">📘</div><div><b>دليل نظام الدرجات GB الكامل</b><small>دليل مصوّر بعشرة فصول</small></div></a>
-      <button type="button" class="res lockbtn" onclick="dOpen(&quot;ورش اللجنة الامتحانية/GB User Manual_Arabic_V1.pdf&quot;,&quot;دليل مستخدم نظام إدارة الدرجات GB&quot;)">
-        <div class="ico">📕</div><div><b>دليل المستخدم — GB (PDF)</b><small>🔒 النسخة العربية V1 — محمي بكلمة مرور</small></div></button>
+      <a class="res" href="ورش اللجنة الامتحانية/GB User Manual_Arabic_V1.pdf" target="_blank" rel="noopener">
+        <div class="ico">📕</div><div><b>دليل المستخدم — GB (PDF)</b><small>النسخة العربية V1 · منشور على بوابة الدعم</small></div></a>
       <button type="button" class="res lockbtn" onclick="dOpen(&quot;ورش اللجنة الامتحانية/اعمام اطلاق نظام اللجنة الامتحانية للسنة الدراسية 2025-2026 صادر.pdf&quot;,&quot;اعمام اطلاق نظام اللجنة الامتحانية 2025-2026&quot;)">
         <div class="ico">📄</div><div><b>اعمام إطلاق اللجنة الامتحانية</b><small>🔒 الاعمام الرسمي 2025-2026 — محمي بكلمة مرور</small></div></button>
       <button type="button" class="res lockbtn" onclick="dOpen(&quot;تعديل معلومات الطالب - SIS.pdf&quot;,&quot;دليل تعديل معلومات الطالب — SIS&quot;)">
@@ -942,12 +942,12 @@
         <div class="ico">📋</div><div><b>إكمال متطلبات الأنظمة الإلكترونية</b><small>🔒 متطلبات الجاهزية للعام 2026-2027 — محمي بكلمة مرور</small></div></button>
       <button type="button" class="res lockbtn" onclick="dOpen(&quot;docs/student-cases-handling.pdf&quot;,&quot;معالجة حالات الطلبة&quot;)">
         <div class="ico">🧾</div><div><b>معالجة حالات الطلبة</b><small>🔒 دليل الحالات الدراسية في SIS — 29 تموز 2026 — محمي بكلمة مرور</small></div></button>
-      <button type="button" class="res lockbtn" onclick="dOpen(&quot;docs/pg-sis-guide.pdf&quot;,&quot;دليل الدراسات العليا في نظام SIS&quot;)">
-        <div class="ico">📘</div><div><b>دليل المستخدم — نظام الدراسات العليا PG-SIS</b><small>🔒 الإصدار 2.0 — 25 آب 2026 · 95 صفحة · بوابة الدعم الوزارية — محمي بكلمة مرور</small></div></button>
+      <a class="res" href="docs/pg-sis-guide.pdf" target="_blank" rel="noopener">
+        <div class="ico">📘</div><div><b>دليل المستخدم — نظام الدراسات العليا PG-SIS</b><small>الإصدار 2.0 — 25 آب 2026 · 95 صفحة · بوابة الدعم الوزارية</small></div></a>
       <button type="button" class="res lockbtn" onclick="dOpen(&quot;docs/pg-sis-registration.pdf&quot;,&quot;تسجيل طلبة الدراسات العليا في SIS&quot;)">
         <div class="ico">📗</div><div><b>إجراءات تسجيل الطلبة في PG-SIS</b><small>🔒 الإصدار 1.0 — 31 آب 2026 · 15 صفحة · بوابة الدعم الوزارية — محمي بكلمة مرور</small></div></button>
-      <button type="button" class="res lockbtn" onclick="dOpen(&quot;docs/student-services-guide.pdf&quot;,&quot;دليل خدمات الطلاب&quot;)">
-        <div class="ico">📙</div><div><b>دليل خدمات الطلاب</b><small>🔒 «Student Services - User Guide» — 20 صفحة · بوابة الدعم الوزارية — محمي بكلمة مرور</small></div></button>
+      <a class="res" href="docs/student-services-guide.pdf" target="_blank" rel="noopener">
+        <div class="ico">📙</div><div><b>دليل خدمات الطلاب</b><small>«Student Services - User Guide» — 20 صفحة · بوابة الدعم الوزارية</small></div></a>
       <button type="button" class="res lockbtn" onclick="dOpen(&quot;docs/bologna-quality-workshop.pdf&quot;,&quot;ورشة تخصصية في جودة مسار بولونيا&quot;)">
         <div class="ico">🎓</div><div><b>ورشة تخصصية في جودة مسار بولونيا</b><small>🔒 وثيقة الورشة — 26 تموز 2026 — محمي بكلمة مرور</small></div></button>
     </div>
@@ -2306,8 +2306,14 @@ function buildTimeline(){
   return TIMELINE.concat(derived);
 }
 
-/* المرفقات المحلية (PDF) منشورة مشفّرة، فتُفتح عبر بوابة كلمة المرور لا برابط مباشر */
-const isLockedDoc = u => !!u && !/^(https?:|#|mailto:)/.test(u) && u.toLowerCase().endsWith('.pdf');
+/* المرفقات المحلية (PDF) منشورة مشفّرة، فتُفتح عبر بوابة كلمة المرور لا برابط مباشر —
+   عدا الأدلة التي تنشرها بوابة الدعم الوزارية علناً، فهذه تُفتح برابط مباشر */
+const OPEN_DOCS = new Set([
+  "docs/pg-sis-guide.pdf",
+  "docs/student-services-guide.pdf",
+  "ورش اللجنة الامتحانية/GB User Manual_Arabic_V1.pdf"
+]);
+const isLockedDoc = u => !!u && !/^(https?:|#|mailto:)/.test(u) && u.toLowerCase().endsWith('.pdf') && !OPEN_DOCS.has(u);
 
 function renderTL(){
   const term = tlSearchEl.value.trim().toLowerCase();
